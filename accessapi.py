@@ -1,4 +1,9 @@
-secret_key = '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'
+import json
+
+with open('config.json') as config_file:
+    config = json.load(config_file)
+
+secret_key = config['SECRET_KEY']
 prompt = 'Give me an outline for a course on how to make web applications using Bubble'
 
 import openai
